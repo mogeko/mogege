@@ -1,0 +1,13 @@
+<div class="intro">
+    {{ with .Site.Params.avatar}}
+    {{ $avatar := .}}
+    <div class="avatar">
+        <a href="/posts/"> <img src="{{ (printf "%s" $avatar)}}"> </a>
+    </div>
+    {{ end }}
+    {{ with .Site.Params.subtitle}}
+    <h2 class="description">
+       {{ . }}
+    </h2>
+    {{ end }}
+</div>
