@@ -10,5 +10,5 @@ description:
 
 <!--
 {{< spoiler >}} 隐藏文字 {{< /spoiler >}}
-{{< biliplayer AV号 >}} <!-- 嵌入 BiliBili 视频 -->
+{{< bilibili AV号 >}} <!-- 嵌入 BiliBili 视频 -->
 -->
