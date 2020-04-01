@@ -1,12 +1,12 @@
 /** Layout **/
-  
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
-  
+
 .navbar {
   height: 4rem;
   line-height: 4rem;
@@ -89,8 +89,8 @@
   line-height: 4rem;
   padding-top: 2em;
 }
-  
-  
+
+
 .notfound {
   font-size: 2em;
   transform: translateY(35vh);
