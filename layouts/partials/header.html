@@ -1,4 +1,7 @@
 <nav class="navbar">
+    {{ if (and .IsPage (not .Params.notsb)) }}
+        <progress id="content_progress" value="0"></progress>
+    {{ end }}
     <div class="container">
         <div class="navbar-header header-logo">
             {{ if .IsHome }}
