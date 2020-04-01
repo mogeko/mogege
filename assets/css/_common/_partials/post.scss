@@ -40,6 +40,15 @@
   .post-content {
     padding-top: 2rem;
 
+    // 隐藏文字
+    .spoiler { 
+      color: black; 
+      background-color:black;
+    }
+    .spoiler:hover{
+      color: white;
+    }
+
     h2,
     h3,
     h4,
