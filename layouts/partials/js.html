@@ -1,0 +1,10 @@
+{{ $highlight := resources.Get "/js/highlight.pack.js" }}
+{{ $main := resources.Get "/js/main.js" }}
+{{ $custom := resources.Get "/js/_custom.js" }}
+
+
+{{ $main := slice  $highlight $main $custom | resources.Concat "/js/vendor_main.js" | resources.Minify}}
+<script src="{{ printf "%s" $main.RelPermalink }}" async=""></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script> pangu.spacingPage();</script>
