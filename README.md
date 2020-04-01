@@ -1,8 +1,13 @@
 # mogege
 
-**This project is based on [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/)**
+[![Hugo](https://img.shields.io/badge/hugo-0.68.3-blue.svg)](https://gohugo.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A blog theme for hugo.
+### A blog theme for [Hugo](https://gohugo.io).
+
+![Screenshot](https://raw.githubusercontent.com/Mogeko/mogege/master/images/screenshot.png)
+
+**This project is based on [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/)**
 
 Because the author of [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/) seems to have abandoned this project, but I prefer this theme, so I simply reopened a new project.
 
@@ -17,7 +22,7 @@ At this stage, I mainly integrate the part I modified with LeaveIt, and will add
 
 
 ## Requirements
-Hugo 0.65 or higher
+Hugo 0.68.3 or higher
 
 **Hugo extended version**, read more [here](https://gohugo.io/news/0.48-relnotes/)
 
@@ -173,4 +178,6 @@ preserveTaxonomyNames = true
 
 ```
 
-> The name of this project comes from the mantra of mogeko in the game [*Mogeko Castle*](https://okegom.fandom.com/wiki/Mogeko_Castle), and the [author](https://github.com/Mogeko)'s name also comes from this game. (this is another story)
+---
+
+> The name of this project comes from the game [*Mogeko Castle*](https://okegom.fandom.com/wiki/Mogeko_Castle), and the [author](https://github.com/Mogeko)'s name also comes from this game. (this is another story)
