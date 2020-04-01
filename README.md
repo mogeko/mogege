@@ -5,7 +5,7 @@
 
 ### A blog theme for [Hugo](https://gohugo.io).
 
-![Screenshot](https://raw.githubusercontent.com/Mogeko/mogege/master/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/Mogeko/mogege/master/images/Screenshot.png)
 
 **This project is based on [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/)**
 
