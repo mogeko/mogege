@@ -1,6 +1,6 @@
-  
+
   /** Home **/
-  
+
   .intro {
     transform: translateY(25vh);
     text-align: center;
@@ -32,19 +32,19 @@
       }
     }
   }
-  
+
   h2.description {
     font-size: 1em;
     font-weight: normal;
     padding: 5px;
   }
-  
+
   .social-links {
     a {
-    
+
       padding: 0 5px;
       &:hover {
-       
+
         background-color: transparent;
       }
     }
