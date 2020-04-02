@@ -4,7 +4,7 @@
 
 
 {{ $main := slice  $highlight $main $custom | resources.Concat "/js/vendor_main.js" | resources.Minify}}
-<script src="{{ printf "%s" $main.RelPermalink }}" async=""></script>
+<script src="{{ printf "%s" $main.RelPermalink }}" defer ></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script> pangu.spacingPage();</script>
