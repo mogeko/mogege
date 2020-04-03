@@ -27,9 +27,9 @@
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
-     {{ if (and .IsPage (not .Params.notsb)) }}
-         <div class="top-scroll-bar"></div>
-     {{ end }}
+    {{ if (and .IsPage (not .Params.notsb)) }}
+        <progress id="content_progress-mobile" max="0" value="0"></progress>
+    {{ end }}
      <div class="container">
         <div class="navbar-header">
             <div class="header-logo">
