@@ -16,7 +16,7 @@
     background-color: $dark-navbar-background-color;
   }
   // 顶部阅读进度条
-  #content_progress {
+  .content_progress {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,13 +30,13 @@
     background-color: transparent;
     color: #ef3982;
   }
-  #content_progress::-webkit-progress-bar {
+  .content_progress::-webkit-progress-bar {
     background-color: transparent;
   }
-  #content_progress::-webkit-progress-value {
+  .content_progress::-webkit-progress-value {
     background-color: #ef3982;
   }
-  #content_progress::-moz-progress-bar {
+  .content_progress::-moz-progress-bar {
     background-color: #ef3982;
   }
   .container {

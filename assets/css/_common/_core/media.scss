@@ -10,7 +10,7 @@
     z-index: 100;
     transition: all 0.6s ease 0s;
     // 顶部阅读进度条
-    #content_progress-mobile {
+    .content_progress {
       position: fixed;
       top: 0;
       left: 0;
@@ -24,13 +24,13 @@
       background-color: transparent;
       color: #ef3982;
     }
-    #content_progress-mobile::-webkit-progress-bar {
+    .content_progress::-webkit-progress-bar {
       background-color: transparent;
     }
-    #content_progress-mobile::-webkit-progress-value {
+    .content_progress::-webkit-progress-value {
       background-color: #ef3982;
     }
-    #content_progress-mobile::-moz-progress-bar {
+    .content_progress::-moz-progress-bar {
       background-color: #ef3982;
     }
     .container {
