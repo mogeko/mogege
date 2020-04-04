@@ -11,9 +11,9 @@ _Blog.switchDarkMode = function() {
         document.body.classList.add('dark-theme');
     }
     // 手动切换 Dark Mode
-    var themeSwitch = document.querySelectorAll('.theme-switch') || isDark;
-    themeSwitch.forEach(function(themeSwitchItem) {
-        themeSwitchItem.addEventListener('click', () => {
+    var themeSwitcher = document.querySelectorAll('.theme-switch') || isDark;
+    themeSwitcher.forEach(function(themeSwitcherItem) {
+        themeSwitcherItem.addEventListener('click', () => {
             var currentTheme = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
             if (currentTheme == '0') {
                 document.body.classList.add('dark-theme');
@@ -28,8 +28,20 @@ _Blog.switchDarkMode = function() {
     });
 }
 
+// 开关移动端菜单
+_Blog.switchMobileMenu = function() {
+    var menuSwitcher = document.querySelectorAll('.menu-toggle');
+    var MobileMenu = document.querySelector('#mobile-menu');
+    menuSwitcher.forEach(function(menuSwitcherItem) {
+        menuSwitcherItem.addEventListener('click', () => {
+            menuSwitcherItem.classList.toggle('active');
+            MobileMenu.classList.toggle('active');
+        })
+    });
+}
+
 // 顶部阅读进度条
-_Blog.scrollIndicator = function () {
+_Blog.scrollIndicator = function() {
     var winHeight = window.innerHeight,
         docHeight = document.documentElement.scrollHeight,
         progressBar = document.querySelectorAll('.content_progress');
@@ -38,14 +50,16 @@ _Blog.scrollIndicator = function () {
         progressBarItem.value = window.scrollY;
     });
 
-    document.addEventListener('scroll', function () {
+    document.addEventListener('scroll', function() {
         progressBar.forEach(function(progressBarItem) {
+            progressBarItem.max = docHeight - winHeight;
             progressBarItem.value = window.scrollY;
         });
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     _Blog.switchDarkMode();
+    _Blog.switchMobileMenu();
     _Blog.scrollIndicator();
 });
