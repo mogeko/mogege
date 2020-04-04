@@ -3,18 +3,14 @@ var _Blog = _Blog || {};
 
 // Dark Mode
 _Blog.switchDarkMode = function() {
-    var currentTheme = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    var isDark = currentTheme === '1';
-    if (currentTheme == '0') {
-        document.body.classList.remove('dark-theme');
-    } else if(currentTheme == '1') {
-        document.body.classList.add('dark-theme');
-    }
+    const currentTheme = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    const isDark = currentTheme === '1';
+    document.body.classList.toggle('dark-theme', isDark);
     // 手动切换 Dark Mode
-    var themeSwitcher = document.querySelectorAll('.theme-switch') || isDark;
+    const themeSwitcher = document.querySelectorAll('.theme-switch');
     themeSwitcher.forEach(function(themeSwitcherItem) {
         themeSwitcherItem.addEventListener('click', () => {
-            var currentTheme = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+            const currentTheme = document.cookie.replace(/(?:(?:^|.*;\s*)dark\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
             if (currentTheme == '0') {
                 document.body.classList.add('dark-theme');
                 document.cookie = "dark=1;path=/";
@@ -30,21 +26,21 @@ _Blog.switchDarkMode = function() {
 
 // 开关移动端菜单
 _Blog.switchMobileMenu = function() {
-    var menuSwitcher = document.querySelectorAll('.menu-toggle');
-    var MobileMenu = document.querySelector('#mobile-menu');
+    const menuSwitcher = document.querySelectorAll('.menu-toggle'),
+          MobileMenu = document.querySelector('#mobile-menu');
     menuSwitcher.forEach(function(menuSwitcherItem) {
         menuSwitcherItem.addEventListener('click', () => {
             menuSwitcherItem.classList.toggle('active');
             MobileMenu.classList.toggle('active');
-        })
+        });
     });
 }
 
 // 顶部阅读进度条
 _Blog.scrollIndicator = function() {
-    var winHeight = window.innerHeight,
-        docHeight = document.documentElement.scrollHeight,
-        progressBar = document.querySelectorAll('.content_progress');
+    const winHeight = window.innerHeight,
+          docHeight = document.documentElement.scrollHeight,
+          progressBar = document.querySelectorAll('.content_progress');
     progressBar.forEach(function(progressBarItem) {
         progressBarItem.max = docHeight - winHeight;
         progressBarItem.value = window.scrollY;
@@ -58,8 +54,20 @@ _Blog.scrollIndicator = function() {
     });
 }
 
+// 在用户切换网页时改变浏览器标题
+_Blog.changeTile = function() {
+    let currentTile = document.title;
+    window.onblur = function() {
+        this.document.title = '别走啊，官人 _(:з」∠)_';
+    }
+    window.onfocus = function() {
+        this.document.title = currentTile;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     _Blog.switchDarkMode();
     _Blog.switchMobileMenu();
     _Blog.scrollIndicator();
+    _Blog.changeTile();
 });
