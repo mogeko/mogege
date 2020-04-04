@@ -1,6 +1,6 @@
 <nav class="navbar">
     {{ if (and .IsPage (not .Params.notsb)) }}
-        <progress id="content_progress" max="0" value="0"></progress>
+        <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
     <div class="container">
         <div class="navbar-header header-logo">
@@ -21,14 +21,14 @@
                 <a class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                 {{ end }}
                 <span class="divide"></span>
-                <a href="javascript:switchDarkMode();" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
                 </span>
         </div>
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
     {{ if (and .IsPage (not .Params.notsb)) }}
-        <progress id="content_progress-mobile" max="0" value="0"></progress>
+        <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
      <div class="container">
         <div class="navbar-header">
