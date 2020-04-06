@@ -1,20 +1,20 @@
 <nav class="navbar">
-    {{ if (and .IsPage (not .Params.notsb)) }}
+    {{ if (and .IsPage (.Site.Params.contentProgress | default true)) }}
         <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
     <div class="container">
-        {{ if .IsHome }}
-        <div class="navbar-header header-logo">
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-        </a>
-        </div>
-        {{ else }}
-        <div class="navbar-header header-back-logo">
+        {{ if (and (not .IsHome) (.Site.Params.Back2Home | default true)) }}
+        <div class="navbar-header header-back2home-logo">
             <span class="logo_mark" >>$</span>
             <a href="{{ .Site.BaseURL }}">
                 <span class="logo_text" >cd /home/</span>
                 <span class="logo_cursor" ></span>
             </a>
+        </div>
+        {{ else }}
+        <div class="navbar-header header-logo">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </a>
         </div>
         {{ end }}
         <div class="navbar-right">
@@ -30,7 +30,7 @@
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
-    {{ if (and .IsPage (not .Params.notsb)) }}
+    {{ if (and .IsPage (.Site.Params.contentProgress | default true)) }}
         <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
      <div class="container">
@@ -39,7 +39,7 @@
                     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </div>
             <div class="navbar-right">
-                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a></div>
                 <div class="menu-toggle">
                     <span></span><span></span><span></span>
                 </div>
