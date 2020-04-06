@@ -3,17 +3,20 @@
         <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
     <div class="container">
+        {{ if .IsHome }}
         <div class="navbar-header header-logo">
-            {{ if .IsHome }}
-        	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            {{ else }}
-            <span class="logo_mark" >></span>
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </a>
+        </div>
+        {{ else }}
+        <div class="navbar-header header-back-logo">
+            <span class="logo_mark" >>$</span>
             <a href="{{ .Site.BaseURL }}">
-                <span class="logo_text" >$ cd /home/ </span>
+                <span class="logo_text" >cd /home/</span>
                 <span class="logo_cursor" ></span>
             </a>
-            {{ end }}
         </div>
+        {{ end }}
         <div class="navbar-right">
                 {{ $currentPage := . }}
                 <span class="menu">
@@ -33,15 +36,7 @@
      <div class="container">
         <div class="navbar-header">
             <div class="header-logo">
-                {{ if .IsHome }}
                     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-                {{ else }}
-                    <span class="logo_mark">></span>
-                    <a href="{{ .Site.BaseURL }}">
-                        <span class="logo_text">$ cd /home/ </span>
-                        <span class="logo_cursor"></span>
-                </a>
-                {{ end }}
             </div>
             <div class="navbar-right">
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
