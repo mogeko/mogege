@@ -61,19 +61,23 @@
     .header-back2home-logo {
       font-weight: bold;
       font-family: 'Fira Code', Consolas, Monaco, Menlo, Consolas, monospace;
-    }
 
-    .logo_cursor {
-      display: inline-block;
-      width: 10px;
-      height: 0.3rem;
-      background: #fe5186;
-      margin-left: -8px;
-      animation: cursor 1s infinite;
-    }
-    @media (prefers-reduced-motion: reduce) {
+      .logo_mark {
+        color: #23d18b;
+      }
+
       .logo_cursor {
-        animation: none;
+        display: inline-block;
+        width: 10px;
+        height: 0.3rem;
+        background: #fe5186;
+        margin-left: -8px;
+        animation: cursor 1s infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .logo_cursor {
+          animation: none;
+        }
       }
     }
   }
