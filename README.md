@@ -14,7 +14,7 @@ Because the author of [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/
 At this stage, I mainly integrate the part I modified with LeaveIt, and will add more features in the future.
 
 ## Features
-- Automatically highlighting code (Support by [highlight.js] (https://highlightjs.org/))
+- Automatically highlighting code (Support by [highlight.js](https://highlightjs.org/))
 - Dark/Light Mode
 - Support for embedded BiliBili video
 - Support hidden text
@@ -126,7 +126,7 @@ preserveTaxonomyNames = true
 [menu]
   [[menu.main]]
     name = "Blog"
-    url = "/posts/"
+    url = "/post/"
     weight = 1
 
   [[menu.main]]

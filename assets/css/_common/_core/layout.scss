@@ -48,27 +48,36 @@
     justify-content: space-between;
     font-size: 1.125em;
 
-    .theme-switch {
+    .divide {
       border-left: 2px solid;
     }
 
     .header-logo {
       font-weight: bold;
-      font-family: monospace, monospace;
+      font-size: 1.3em;
+      font-family: 'Lobster', cursive;
     }
 
-    .logo_cursor {
-      display: inline-block;
-      width: 10px;
-      height: 1rem;
-      background: #fe5186;
-      margin-left: 5px;
-      border-radius: 1px;
-      animation: cursor 1s infinite;
-    }
-    @media (prefers-reduced-motion: reduce) {
+    .header-back2home-logo {
+      font-weight: bold;
+      font-family: 'Fira Code', Consolas, Monaco, Menlo, Consolas, monospace;
+
+      .logo_mark {
+        color: #23d18b;
+      }
+
       .logo_cursor {
-        animation: none;
+        display: inline-block;
+        width: 10px;
+        height: 0.3rem;
+        background: #fe5186;
+        margin-left: -8px;
+        animation: cursor 1s infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .logo_cursor {
+          animation: none;
+        }
       }
     }
   }

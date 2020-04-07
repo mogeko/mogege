@@ -41,24 +41,10 @@
       background: $light-background-color;
       .header-logo {
         font-weight: bold;
-        font-family: monospace, monospace;
+        font-size: x-large;
+        font-family: 'Lobster', cursive;
       }
-
-      .logo_cursor {
-        display: inline-block;
-        width: 10px;
-        height: 1rem;
-        background: #fe5186;
-        margin-left: 5px;
-        border-radius: 1px;
-        animation: cursor 1s infinite;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .logo_cursor {
-        animation: none;
-        }
-      }
-      .navbar-header {
+      .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -66,6 +52,8 @@
         padding-right: 1em;
         padding-left: 1em;
         box-sizing: border-box;
+        position: fixed;
+        z-index: 10;
 
         .navbar-right {
           display: flex;
@@ -135,20 +123,36 @@
       .menu {
         text-align: center;
         background: #ffffff;
-        border-top: 2px solid #000000;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        position: fixed;
         display: none;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1);
-        a {
-          display: block;
-          line-height: 2.5em;
+        .mb-md {
+          padding-top: 150px;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+          a {
+            display: block;
+            line-height: 2.5em;
+            font-size: 2em;
+            margin: auto;
+            width: min-content;
+            &.active .menu-active {
+                position: relative;
+                top: -10vw;
+                height: 4px;
+                background-color: #dd1912;
+            }
+          }
         }
-
         &.active {
           display: block;
         }
-
         .dark-theme & {
           background: $dark-background-color;
           border-top: 2px solid $dark-font-secondary-color;
@@ -246,7 +250,7 @@
 
     background: $dark-background-color !important;
 
-    .navbar-header .menu-toggle span {
+    .navbar .menu-toggle span {
       background: $dark-font-color;
     }
 
