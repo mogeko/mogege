@@ -126,7 +126,7 @@ preserveTaxonomyNames = true
 [menu]
   [[menu.main]]
     name = "Blog"
-    url = "/posts/"
+    url = "/post/"
     weight = 1
 
   [[menu.main]]

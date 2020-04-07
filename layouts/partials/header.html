@@ -33,8 +33,8 @@
         <progress class="content_progress" max="0" value="0"></progress>
     {{ end }}
      <div class="container">
-        <div class="navbar-header">
-            <div class="header-logo">
+        <div class="navbar">
+            <div class="navbar-header header-logo">
                     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </div>
             <div class="navbar-right">
@@ -46,10 +46,15 @@
         </div>
      
           <div class="menu" id="mobile-menu">
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                <a class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-                {{ end }}
+                <nav class="mb-md">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        <a class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+                            <h3>{{ .Name }}</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    {{ end }}
+                </nav>
         </div>
     </div>
 </nav>
