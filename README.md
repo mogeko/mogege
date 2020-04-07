@@ -98,6 +98,29 @@ Then provide your `Client ID` and `Client Secret` from Github Application in con
     distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
 ```
 
+## Custom CSS/JavaScript
+Support custom CSS or JavaScript
+
+Place your custom CSS and JavaScript files in the `/static/css` and `/static/js` directories of your blog, respectively
+
+```
+static
+├── css
+│   └── _custom.css
+└── js
+    └── _custom.js
+```
+
+Then edit in `config.toml`:
+
+```toml
+[params.custom]
+    css = ["css/_custom.css"]
+    js = ["js/_custom.js"]
+```
+
+> Currently only supports CSS does not support Sass
+
 ## Configuration
 There are few configuration options you can add to your `config.toml` file.
 

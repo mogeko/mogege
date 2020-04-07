@@ -1,10 +1,13 @@
 {{ $highlight := resources.Get "/js/highlight.pack.js" }}
 {{ $main := resources.Get "/js/main.js" }}
-{{ $custom := resources.Get "/js/_custom.js" }}
 
 
-{{ $main := slice  $highlight $main $custom | resources.Concat "/js/vendor_main.js" | resources.Minify}}
+{{ $main := slice  $highlight $main | resources.Concat "/js/vendor_main.js" | resources.Minify}}
 <script src="{{ printf "%s" $main.RelPermalink }}" defer ></script>
+
+{{ range .Site.Params.custom.js }}
+<script src="{{ . | absURL }}" defer ></script>
+{{ end }}
 
 <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
 <script> pangu.spacingPage();</script>
