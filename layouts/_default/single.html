@@ -33,12 +33,16 @@
 
         {{ with .Params.featured_image }}
           {{ $img := . -}}
-          <img src="{{ printf "%s" $img }}" class="featured_image">
+          <img src="{{ printf "%s" $img }}" class="featured_image" loading="lazy">
         {{ end }}
         <!-- end featured_image-->
-        {{ $reImgIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" /></p>" }}
-        {{ $reImgOut := "<p><img src=\"$1\" alt=\"$2\" loading=\"lazy\" ></p>" }}
-        {{ $finalContent := .Content | replaceRE $reImgIn $reImgOut | safeHTML }}
+        {{ $reImgIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
+        {{ $reImgOut := "<img src=\"$1\" alt=\"$2\" loading=\"lazy\" >" }}
+        {{ $tmpContent := .Content | replaceRE $reImgIn $reImgOut | safeHTML }}
+
+        {{ $reImgTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" title=\"([^\"]+)?\">" }}
+        {{ $reImgTitleOut := "<figure><img src=\"$1\" alt=\"$2\" title=\"$3\" loading=\"lazy\" ><figcaption>$3</figcaption></figure>" }}
+        {{ $finalContent := $tmpContent | replaceRE $reImgTitleIn $reImgTitleOut | safeHTML }}
 
         {{ $finalContent }}
     </div>
