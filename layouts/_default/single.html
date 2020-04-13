@@ -36,8 +36,8 @@
           <img src="{{ printf "%s" $img }}" class="featured_image">
         {{ end }}
         <!-- end featured_image-->
-        {{ $reImgIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\" />" }}
-        {{ $reImgOut := "<img src=\"$1\" alt=\"$2\" loading=\"lazy\" >" }}
+        {{ $reImgIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" /></p>" }}
+        {{ $reImgOut := "<p><img src=\"$1\" alt=\"$2\" loading=\"lazy\" ></p>" }}
         {{ $finalContent := .Content | replaceRE $reImgIn $reImgOut | safeHTML }}
 
         {{ $finalContent }}
