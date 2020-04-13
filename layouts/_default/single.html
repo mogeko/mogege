@@ -36,7 +36,11 @@
           <img src="{{ printf "%s" $img }}" class="featured_image">
         {{ end }}
         <!-- end featured_image-->
-        {{ .Content | safeHTML}}
+        {{ $reImgIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\" />" }}
+        {{ $reImgOut := "<img src=\"$1\" alt=\"$2\" loading=\"lazy\" >" }}
+        {{ $finalContent := .Content | replaceRE $reImgIn $reImgOut | safeHTML }}
+
+        {{ $finalContent }}
     </div>
 
     <div class="post-copyright">

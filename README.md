@@ -14,6 +14,7 @@ Because the author of [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/
 At this stage, I mainly integrate the part I modified with LeaveIt, and will add more features in the future.
 
 ## Features
+- Images lazy loading ([Can I use?](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes))
 - Automatically highlighting code (Support by [highlight.js](https://highlightjs.org/))
 - Dark/Light Mode
 - Support for embedded BiliBili video
@@ -52,6 +53,14 @@ cp -R themes/mogege/exampleSite/content .
 ```bash
 hugo server --minify --theme mogege
 ```
+
+## Lazy loading
+
+If your browser is [supported](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes), we will lazy loading `<img>` and `<iframes>`
+
+Make sure your browser version:
+- Chrome > 76
+- Firefox > 75
 
 ## Embedded BiliBili video
 
