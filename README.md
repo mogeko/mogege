@@ -7,26 +7,36 @@
 
 ![Screenshot](https://raw.githubusercontent.com/Mogeko/mogege/master/images/Screenshot.png)
 
-**This project is based on [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/)**
+**This project is based on
+[LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/)**
 
-Because the author of [LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/) seems to have abandoned this project, but I prefer this theme, so I simply reopened a new project.
+Because the author of
+[LeaveIt](https://raw.githubusercontent.com/liuzc/LeaveIt/) seems to have
+abandoned this project, but I prefer this theme, so I simply reopened a new
+project.
 
-At this stage, I mainly integrate the part I modified with LeaveIt, and will add more features in the future.
+At this stage, I mainly integrate the part I modified with LeaveIt, and will add
+more features in the future.
 
 ## Features
-- Automatically highlighting code (Support by [highlight.js](https://highlightjs.org/))
+
+- Images lazy loading
+  ([Can I use?](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes))
+- Automatically highlighting code (Support by
+  [highlight.js](https://highlightjs.org/))
 - Dark/Light Mode
 - Support for embedded BiliBili video
-- Support hidden text
-...
-
+- Support hidden text ...
 
 ## Requirements
+
 Hugo 0.68.3 or higher
 
-**Hugo extended version**, read more [here](https://gohugo.io/news/0.48-relnotes/)
+**Hugo extended version**, read more
+[here](https://gohugo.io/news/0.48-relnotes/)
 
 ## Installation
+
 Navigate to your hugo project root and run:
 
 ```bash
@@ -40,6 +50,7 @@ hugo server --minify --theme mogege
 ```
 
 ## Creating site from scratch
+
 Below is example how to create new site from scratch
 
 ```bash
@@ -53,9 +64,21 @@ cp -R themes/mogege/exampleSite/content .
 hugo server --minify --theme mogege
 ```
 
+## Lazy loading
+
+If your browser is
+[supported](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes),
+we will lazy loading `<img>` and `<iframes>`
+
+Make sure your browser version:
+
+- Chrome > 76
+- Firefox > 75
+
 ## Embedded BiliBili video
 
-You can embed BiliBili videos via Shortcodes, just provide the AV号 of the bilibili video
+You can embed BiliBili videos via Shortcodes, just provide the AV 号 of the
+bilibili video
 
 ```txt
 {{< bilibili [AV号] >}}
@@ -74,15 +97,22 @@ You can use "hidden text" to hide spoiler content
 Click [here](https://mogeko.github.io/2020/080#spoiler) for examples
 
 ## Gitalk comment system
-This blog supports the [gitalk](https://github.com/gitalk/gitalk) comment system. To use gitalk, you need to apply for a Github Application. For details, please refer to [here](https://mogeko.me/2018/024/#%E5%88%9B%E5%BB%BA-github-application).
+
+This blog supports the [gitalk](https://github.com/gitalk/gitalk) comment
+system. To use gitalk, you need to apply for a Github Application. For details,
+please refer to
+[here](https://mogeko.me/2018/024/#%E5%88%9B%E5%BB%BA-github-application).
 
 Then enable gitalk in config.toml
+
 ```toml
 [params]
     enableGitalk = true
 ```
 
-Then provide your `Client ID` and `Client Secret` from Github Application in config.toml
+Then provide your `Client ID` and `Client Secret` from Github Application in
+config.toml
+
 ```toml
 [params.gitalk] # Github: https://github.com/gitalk/gitalk
     clientID = "[Client ID]" # Your client ID
@@ -99,9 +129,11 @@ Then provide your `Client ID` and `Client Secret` from Github Application in con
 ```
 
 ## Custom CSS/JavaScript
+
 Support custom CSS or JavaScript
 
-Place your custom CSS and JavaScript files in the `/static/css` and `/static/js` directories of your blog, respectively
+Place your custom CSS and JavaScript files in the `/static/css` and `/static/js`
+directories of your blog, respectively
 
 ```
 static
@@ -122,6 +154,7 @@ Then edit in `config.toml`:
 > Currently only supports CSS does not support Sass
 
 ## Configuration
+
 There are few configuration options you can add to your `config.toml` file.
 
 ```toml
@@ -168,7 +201,7 @@ preserveTaxonomyNames = true
     weight = 4
 
 [params]
-    since = 
+    since =
     author = ""                         # Author's name
     avatar = "/images/me/avatar.jpg"    # Author's avatar
     subtitle = ""                       # Subtitle
@@ -203,4 +236,7 @@ preserveTaxonomyNames = true
 
 ---
 
-> The name of this project comes from the game [*Mogeko Castle*](https://okegom.fandom.com/wiki/Mogeko_Castle), and the [author](https://github.com/Mogeko)'s name also comes from this game. (this is another story)
+> The name of this project comes from the game
+> [_Mogeko Castle_](https://okegom.fandom.com/wiki/Mogeko_Castle), and the
+> [author](https://github.com/Mogeko)'s name also comes from this game. (this is
+> another story)
