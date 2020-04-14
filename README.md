@@ -77,10 +77,10 @@ Make sure your browser version:
 
 ## Embedded BiliBili video
 
-You can embed BiliBili videos via Shortcodes, just provide the AV号/BV号 of the
-bilibili video
+You can embed BiliBili videos via Shortcodes, just provide the AV 号/BV 号 of
+the bilibili video
 
-You can also use the PV号 to control the 分P (default: `1`)
+You can also use the PV 号 to control the 分 P (default: `1`)
 
 ```txt
 {{< bilibili [AV号/BV号] [PV号] >}}
