@@ -126,6 +126,27 @@
       }
     }
 
+    .highlight {
+      position: relative;
+      .copy-code-button {
+        position: absolute;
+        bottom: 7px;
+        right: 7px;
+        border: 0;
+        border-radius: 4px;
+        padding: 1px;
+        font-size: .7em;
+        line-height: 1.8;
+        color: #fff;
+        background-color: #777;
+        min-width: 55px;
+        text-align: center;
+      }
+      .copy-code-button:hover {
+        background-color: $light-post-link-hover-color;
+      }
+    }
+
     ul {
       padding-left: 2em;
     }

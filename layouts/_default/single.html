@@ -33,7 +33,7 @@
 
         {{ with .Params.featured_image }}
           {{ $img := . -}}
-          <img src="{{ printf "%s" $img }}" class="featured_image" loading="lazy">
+          <img src="{{ printf "%s" $img }}" class="featured_image">
         {{ end }}
         <!-- end featured_image-->
         {{ $reImgIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
