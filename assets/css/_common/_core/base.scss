@@ -22,15 +22,15 @@ html {
     }
   }
 }
-  
+
 ::selection {
   background: rgba(0, 149, 255, 0.1);
 }
-  
+
 html {
   font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft Yahei", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
 }
-  
+
 body {
   font-size: 11pt;
   font-weight: 400;
@@ -61,7 +61,7 @@ body {
     color: $dark-font-color;
   }
 }
-  
+
 a {
   color: $light-global-link-color;
   text-decoration: none;
@@ -84,7 +84,7 @@ a {
     }
   }
 }
-  
+
 blockquote {
   font: 14px/22px normal helvetica, sans-serif;
   margin-top: 10px;

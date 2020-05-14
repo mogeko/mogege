@@ -78,11 +78,14 @@ Make sure your browser version:
 
 ## TeX Functions
 
-**Note:** [list of TeX functions supported by KaTeX](https://katex.org/docs/supported.html)
+**Note:**
+[list of TeX functions supported by KaTeX](https://katex.org/docs/supported.html)
 
-To enable KaTex globally set the parameter `math` to `true` in a project's `config.toml`
+To enable KaTex globally set the parameter `math` to `true` in a project's
+`config.toml`
 
-To enable KaTex on a per page basis include the parameter `math: true` in content files.
+To enable KaTex on a per page basis include the parameter `math: true` in
+content files.
 
 ### Example
 
@@ -93,7 +96,7 @@ $$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
 % or
 % Block math:
 $$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$
 ```
 
