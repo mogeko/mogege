@@ -3,11 +3,23 @@
 
 
 {{ $main := slice  $highlight $main | resources.Concat "/js/vendor_main.js" | resources.Minify}}
-<script src="{{ printf "%s" $main.RelPermalink }}" defer ></script>
+<!-- Main -->>
+<script defer src="{{ printf "%s" $main.RelPermalink }}"></script>
 
-{{ range .Site.Params.custom.js }}
-<script src="{{ . | absURL }}" defer ></script>
+{{ if or .Page.Params.math .Site.Params.math }}
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha256-F/Xda58SPdcUCr+xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI=" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+{{ if or (.Page.Params.restyleTextSpacing | default true) (.Site.Params.restyleTextSpacing | default true) }}
+<!-- Pangu.js -->
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script> pangu.spacingPage();</script>
+{{ end }}
+
+{{ range .Site.Params.custom.js }}
+<!-- Custom -->>
+<script defer src="{{ . | absURL }}" ></script>
+{{ end }}
