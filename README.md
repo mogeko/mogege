@@ -24,6 +24,7 @@ more features in the future.
   ([Can I use?](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes))
 - Automatically highlighting code (Support by
   [highlight.js](https://highlightjs.org/))
+- TeX Functions (Support by [KaTeX](https://katex.org/))
 - Dark/Light Mode
 - Support for embedded BiliBili video
 - Support hidden text ...
@@ -74,6 +75,32 @@ Make sure your browser version:
 
 - Chrome > 76
 - Firefox > 75
+
+## TeX Functions
+
+**Note:**
+[list of TeX functions supported by KaTeX](https://katex.org/docs/supported.html)
+
+To enable KaTex globally set the parameter `math` to `true` in a project's
+`config.toml`
+
+To enable KaTex on a per page basis include the parameter `math: true` in
+content files.
+
+### Example
+
+```latex
+% Inline math:
+$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
+
+% or
+% Block math:
+$$
+ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$
+```
+
+![KaTeX](https://raw.githubusercontent.com/Mogeko/mogege/master/images/KaTeX.png)
 
 ## Embedded BiliBili video
 
