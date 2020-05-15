@@ -26,6 +26,7 @@
             }
         });
         let image = document.createElement("IMG");
+        image.loading = 'lazy';
         image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(x.innerText);
         x.parentNode.insertBefore(image, x);
         x.style.display = 'none'
