@@ -118,8 +118,8 @@ content files.
 You can insert PlantUML in the post by:
 
 <pre>
-&#96;&#96;&#96;pantmul  
-PlantUML syntax  
+&#96;&#96;&#96;pantmul
+PlantUML syntax
 &#96;&#96;&#96;
 </pre>
 
