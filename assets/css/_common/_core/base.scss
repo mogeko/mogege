@@ -1,12 +1,13 @@
-/** jsDelivr **/
-/** highlight.js && Fira Code **/
-@import url('https://cdn.jsdelivr.net/combine/npm/firacode@3.1.0,npm/highlight.js@10.0.3/styles/github-gist.min.css');
+/** highlight.js**/
+@import url('https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/github-gist.min.css');
 
 /** Font **/
 /* iconfont */
 @import url('https://at.alicdn.com/t/font_1230224_omviwgy4rx.css');
 /* josefin-sans-regular && Lobster && pt-sans-regular */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&family=PT+Sans&display=swap');
+/* FiraCode */
+@import url('https://cdn.jsdelivr.net/npm/firacode@3.1.0/distr/fira_code.min.css');
 
 html {
   &::-webkit-scrollbar {

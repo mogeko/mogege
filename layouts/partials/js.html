@@ -13,6 +13,27 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI=" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
+{{ if or .Page.Params.plantuml .Site.Params.plantuml }}
+<script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js"></script>
+<script>
+(function(){
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(x){
+        let engine;
+        x.getAttribute("class").split(" ").forEach(function(cls){
+            if (cls.startsWith(plantumlPrefix)) {
+                engine = cls.substr(plantumlPrefix.length);
+            }
+        });
+        let image = document.createElement("IMG");
+        image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(x.innerText);
+        x.parentNode.insertBefore(image, x);
+        x.style.display = 'none'
+    });
+})();
+</script>
+{{ end }}
+
 {{ if or (.Page.Params.restyleTextSpacing | default true) (.Site.Params.restyleTextSpacing | default true) }}
 <!-- Pangu.js -->
 <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
