@@ -41,8 +41,8 @@
     padding-top: 2rem;
 
     // 隐藏文字
-    .spoiler { 
-      color: black; 
+    .spoiler {
+      color: black;
       background-color:black;
     }
     .spoiler:hover{
@@ -106,8 +106,9 @@
 
     code,
     pre {
-      padding: 7px;
+      padding: 16px;
       font-size: 13px;
+      line-height: 1.45;
       white-space: pre-wrap;
       word-wrap: break-word;
       font-family: 'Fira Code', Consolas, Monaco, Menlo, Consolas, monospace;
@@ -130,7 +131,7 @@
       position: relative;
       .copy-code-button {
         position: absolute;
-        bottom: 7px;
+        bottom: 16px;
         right: 7px;
         border: 0;
         border-radius: 4px;
@@ -194,7 +195,7 @@
       }
     }
 
-   
+
 
     img[data-action="zoom"] {
       cursor: zoom-in;

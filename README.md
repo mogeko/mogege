@@ -25,6 +25,8 @@ more features in the future.
 - Automatically highlighting code (Support by
   [highlight.js](https://highlightjs.org/))
 - TeX Functions (Support by [KaTeX](https://katex.org/))
+- [PlantUML](https://plantuml.com/en/) (Sequence diagram, Usecase diagram, Class
+  diagram ...)
 - Dark/Light Mode
 - Support for embedded BiliBili video
 - Support hidden text ...
@@ -101,6 +103,45 @@ $$
 ```
 
 ![KaTeX](https://raw.githubusercontent.com/Mogeko/mogege/master/images/KaTeX.png)
+
+## PlantUML
+
+**PlantUML is supported by the
+[official server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)**
+
+To enable KaTex globally set the parameter `plantuml` to `true` in a project's
+`config.toml`
+
+To enable KaTex on a per page basis include the parameter `plantuml: true` in
+content files.
+
+You can insert PlantUML in the post by:
+
+<pre>
+&#96;&#96;&#96;pantmul
+PlantUML syntax
+&#96;&#96;&#96;
+</pre>
+
+For example:
+
+```plantuml
+@startuml
+Bob -> Alice : hello
+
+create Other
+Alice -> Other : new
+
+create control String
+Alice -> String
+note right : You can also put notes!
+
+Alice --> Bob : ok
+
+@enduml
+```
+
+![PlantUML](https://raw.githubusercontent.com/Mogeko/mogege/master/images/PlantUML.svg)
 
 ## Embedded BiliBili video
 
