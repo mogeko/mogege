@@ -1015,7 +1015,9 @@ hljs.registerLanguage(
           a,
           e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ }),
         ]);
-      var d = { variants: [o, c, s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE] },
+      var d = {
+          variants: [o, c, s, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
+        },
         E =
           e.IDENT_RE +
           "(<" +
@@ -1233,7 +1235,11 @@ hljs.registerLanguage(
           illegal: /</,
           relevance: 0,
           contains: [
-            { className: "attr", begin: "[A-Za-z0-9\\._:-]+", relevance: 0 },
+            {
+              className: "attr",
+              begin: "[A-Za-z0-9\\._:-]+",
+              relevance: 0,
+            },
             {
               begin: /=\s*/,
               relevance: 0,
@@ -1524,8 +1530,15 @@ hljs.registerLanguage(
             a,
             e.C_LINE_COMMENT_MODE,
             n,
-            { className: "type", begin: "\\b[A-Z][\\wÀ-ʸ']*[!?]" },
-            { className: "type", begin: "\\b[A-Z][\\wÀ-ʸ']*", relevance: 0 },
+            {
+              className: "type",
+              begin: "\\b[A-Z][\\wÀ-ʸ']*[!?]",
+            },
+            {
+              className: "type",
+              begin: "\\b[A-Z][\\wÀ-ʸ']*",
+              relevance: 0,
+            },
             r,
             {
               className: "function",
@@ -1533,7 +1546,9 @@ hljs.registerLanguage(
               end: "{",
               excludeEnd: !0,
               contains: [
-                e.inherit(e.TITLE_MODE, { begin: /[A-Za-z$_][0-9A-Za-z$_]*/ }),
+                e.inherit(e.TITLE_MODE, {
+                  begin: /[A-Za-z$_][0-9A-Za-z$_]*/,
+                }),
                 { begin: /</, end: />/ },
                 {
                   className: "params",
@@ -1644,7 +1659,11 @@ hljs.registerLanguage(
             {
               className: "section",
               variants: [
-                { begin: "^#{1,6}", end: "$", contains: (c = c.concat(i, s)) },
+                {
+                  begin: "^#{1,6}",
+                  end: "$",
+                  contains: (c = c.concat(i, s)),
+                },
                 {
                   begin: "(?=^.+?\\n[=-]{2,}$)",
                   contains: [
@@ -1663,7 +1682,12 @@ hljs.registerLanguage(
             },
             i,
             s,
-            { className: "quote", begin: "^>\\s+", contains: c, end: "$" },
+            {
+              className: "quote",
+              begin: "^>\\s+",
+              contains: c,
+              end: "$",
+            },
             {
               className: "code",
               variants: [
@@ -1711,7 +1735,10 @@ hljs.registerLanguage(
   (function () {
     "use strict";
     return function (e) {
-      var n = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }] },
+      var n = {
+          className: "subst",
+          variants: [{ begin: "\\$[A-Za-z0-9_]+" }],
+        },
         t = {
           className: "subst",
           variants: [{ begin: "\\${", end: "}" }],
@@ -2350,7 +2377,10 @@ hljs.registerLanguage(
             illegal: "\\n|\\s|=",
             starts: { end: "$", relevance: 0 },
           },
-          { begin: "\\n\\n", starts: { subLanguage: [], endsWithParent: !0 } },
+          {
+            begin: "\\n\\n",
+            starts: { subLanguage: [], endsWithParent: !0 },
+          },
         ],
       };
     };
@@ -2786,14 +2816,22 @@ hljs.registerLanguage(
           {
             className: "string",
             variants: [
-              { begin: /'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE] },
+              {
+                begin: /'''/,
+                end: /'''/,
+                contains: [e.BACKSLASH_ESCAPE],
+              },
               { begin: /'/, end: /'/, contains: [e.BACKSLASH_ESCAPE] },
               {
                 begin: /"""/,
                 end: /"""/,
                 contains: [e.BACKSLASH_ESCAPE, s],
               },
-              { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, s] },
+              {
+                begin: /"/,
+                end: /"/,
+                contains: [e.BACKSLASH_ESCAPE, s],
+              },
             ],
           },
           {
@@ -2896,7 +2934,12 @@ hljs.registerLanguage(
     return function (e) {
       var n =
           "getpwent getservent quotemeta msgrcv scalar kill dbmclose undef lc ma syswrite tr send umask sysopen shmwrite vec qx utime local oct semctl localtime readpipe do return format read sprintf dbmopen pop getpgrp not getpwnam rewinddir qq fileno qw endprotoent wait sethostent bless s|0 opendir continue each sleep endgrent shutdown dump chomp connect getsockname die socketpair close flock exists index shmget sub for endpwent redo lstat msgctl setpgrp abs exit select print ref gethostbyaddr unshift fcntl syscall goto getnetbyaddr join gmtime symlink semget splice x|0 getpeername recv log setsockopt cos last reverse gethostbyname getgrnam study formline endhostent times chop length gethostent getnetent pack getprotoent getservbyname rand mkdir pos chmod y|0 substr endnetent printf next open msgsnd readdir use unlink getsockopt getpriority rindex wantarray hex system getservbyport endservent int chr untie rmdir prototype tell listen fork shmread ucfirst setprotoent else sysseek link getgrgid shmctl waitpid unpack getnetbyname reset chdir grep split require caller lcfirst until warn while values shift telldir getpwuid my getprotobynumber delete and sort uc defined srand accept package seekdir getprotobyname semop our rename seek if q|0 chroot sysread setpwent no crypt getc chown sqrt write setnetent setpriority foreach tie sin msgget map stat getlogin unless elsif truncate exec keys glob tied closedir ioctl socket readlink eval xor readline binmode setservent eof ord bind alarm pipe atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when",
-        t = { className: "subst", begin: "[$@]\\{", end: "\\}", keywords: n },
+        t = {
+          className: "subst",
+          begin: "[$@]\\{",
+          end: "\\}",
+          keywords: n,
+        },
         s = { begin: "->{", end: "}" },
         r = {
           variants: [
@@ -4296,7 +4339,12 @@ hljs.registerLanguage(
                 className: "doctag",
                 begin: "@[A-Za-z]+",
                 contains: [
-                  { className: "type", begin: "\\{", end: "\\}", relevance: 0 },
+                  {
+                    className: "type",
+                    begin: "\\{",
+                    end: "\\}",
+                    relevance: 0,
+                  },
                   {
                     className: "variable",
                     begin: a + "(?=\\s*(-)|$)",
@@ -4361,7 +4409,12 @@ hljs.registerLanguage(
                 ],
                 subLanguage: "xml",
                 contains: [
-                  { begin: n.begin, end: n.end, skip: !0, contains: ["self"] },
+                  {
+                    begin: n.begin,
+                    end: n.end,
+                    skip: !0,
+                    contains: ["self"],
+                  },
                 ],
               },
             ],
