@@ -14,22 +14,17 @@
 {{ end }}
 
 {{ if or .Page.Params.plantuml .Site.Params.plantuml }}
+<!-- PlantUML -->
 <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js"></script>
 <script>
 (function(){
     let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(x){
-        let engine;
-        x.getAttribute("class").split(" ").forEach(function(cls){
-            if (cls.startsWith(plantumlPrefix)) {
-                engine = cls.substr(plantumlPrefix.length);
-            }
-        });
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
         let image = document.createElement("IMG");
-        image.loading = 'lazy';
-        image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(x.innerText);
-        x.parentNode.insertBefore(image, x);
-        x.style.display = 'none'
+        image.loading = 'lazy'; // Lazy loading
+        image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+        code.parentNode.insertBefore(image, code);
+        code.style.display = 'none'
     });
 })();
 </script>
