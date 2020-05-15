@@ -25,7 +25,8 @@ more features in the future.
 - Automatically highlighting code (Support by
   [highlight.js](https://highlightjs.org/))
 - TeX Functions (Support by [KaTeX](https://katex.org/))
-- [PlantUML](https://plantuml.com/en/) (Sequence diagram, Usecase diagram, Class diagram ...)
+- [PlantUML](https://plantuml.com/en/) (Sequence diagram, Usecase diagram, Class
+  diagram ...)
 - Dark/Light Mode
 - Support for embedded BiliBili video
 - Support hidden text ...
@@ -103,10 +104,10 @@ $$
 
 ![KaTeX](https://raw.githubusercontent.com/Mogeko/mogege/master/images/KaTeX.png)
 
-
 ## PlantUML
 
-**PlantUML is supported by the [official server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)**
+**PlantUML is supported by the
+[official server](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)**
 
 To enable KaTex globally set the parameter `plantuml` to `true` in a project's
 `config.toml`
