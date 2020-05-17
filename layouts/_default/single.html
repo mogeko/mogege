@@ -40,7 +40,7 @@
         {{ $reImgOut := "<img src=\"$1\" alt=\"$2\" loading=\"lazy\" >" }}
         {{ $tmpContent := .Content | replaceRE $reImgIn $reImgOut | safeHTML }}
 
-        {{ $reImgTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" title=\"([^\"]+)?\">" }}
+        {{ $reImgTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\">" }}
         {{ $reImgTitleOut := "<figure><img src=\"$1\" alt=\"$2\" title=\"$3\" loading=\"lazy\" ><figcaption>$3</figcaption></figure>" }}
         {{ $finalContent := $tmpContent | replaceRE $reImgTitleIn $reImgTitleOut | safeHTML }}
 
