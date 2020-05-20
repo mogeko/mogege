@@ -30,7 +30,7 @@
 </script>
 {{ end }}
 
-{{ if or (.Page.Params.restyleTextSpacing | default true) (.Site.Params.restyleTextSpacing | default true) }}
+{{ if and (.Page.Params.restyleTextSpacing | default true) (.Site.Params.restyleTextSpacing | default true) }}
 <!-- Pangu.js -->
 <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script> pangu.spacingPage();</script>
