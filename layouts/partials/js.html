@@ -3,7 +3,7 @@
 
 
 {{ $main := slice  $highlight $main | resources.Concat "/js/vendor_main.js" | resources.Minify}}
-<!-- Main -->>
+<!-- Main -->
 <script defer src="{{ printf "%s" $main.RelPermalink }}"></script>
 
 {{ if or .Page.Params.math .Site.Params.math }}
