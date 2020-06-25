@@ -205,7 +205,7 @@ Support custom CSS or JavaScript
 Place your custom CSS and JavaScript files in the `/static/css` and `/static/js`
 directories of your blog, respectively
 
-```
+```txt
 static
 ├── css
 │   └── _custom.css

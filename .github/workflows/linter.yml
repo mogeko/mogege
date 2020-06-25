@@ -21,8 +21,7 @@ jobs:
         env:
           VALIDATE_YAML: true
           VALIDATE_JSON: true
-          VALIDATE_MD: true
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_CSS: true
-          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_ALL_CODEBASE: false
 ...
