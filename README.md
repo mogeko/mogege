@@ -31,6 +31,26 @@ more features in the future.
 - Support for embedded BiliBili video
 - Support hidden text ...
 
+Here is a table showing the similarities and differences between [mogege](https://github.com/Mogeko/mogege) and [LeaveIt](https://github.com/liuzc/LeaveIt):
+
+| Features                    | mogege                                                       | LeaveIt |
+| --------------------------- | ------------------------------------------------------------ | ------- |
+| Categories                  | Yes                                                          | Yes     |
+| Tags                        | Yes                                                          | Yes     |
+| RSS support                 | Yes                                                          | Yes     |
+| sitemap.xml                 | Yes                                                          | Yes     |
+| robots.txt                  | Yes                                                          | Yes     |
+| Quote                       | Optimization                                                 | Yes     |
+| Images lazy loading         | Optimization[*](https://caniuse.com/#search=Lazy%20loading%20via%20attribute%20for%20images%20%26%20iframes) | Yes     |
+| Dark/Light Mode             | Optimization                                                 | Yes     |
+| Highlighting code           | Optimization                                                 | Yes     |
+| Comment area                | Optimization                                                 | Yes     |
+| TeX Functions               | Yes                                                          |         |
+| PlantUML                    | Yes                                                          |         |
+| BiliBili video (shortcodes) | Yes                                                          |         |
+| Hidden text (shortcodes)    | Yes                                                          |         |
+| Social button               |                                                              | Yes     |
+
 ## Requirements
 
 Hugo 0.68.3 or higher
