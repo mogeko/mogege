@@ -5,5 +5,5 @@
 *.dylib
 *.test
 
-public/*
-resources/_gen/*
+exampleSite/public/*
+exampleSite/resources/_gen/*

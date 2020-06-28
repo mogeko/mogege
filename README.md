@@ -49,7 +49,8 @@ Here is a table showing the similarities and differences between [mogege](https:
 | PlantUML                    | Yes                                                          |         |
 | BiliBili video (shortcodes) | Yes                                                          |         |
 | Hidden text (shortcodes)    | Yes                                                          |         |
-| Social button               |                                                              | Yes     |
+| Social button               | Yes                                                          | Yes     |
+| lightGallery                |                                                              | Yes     |
 
 ## Requirements
 
