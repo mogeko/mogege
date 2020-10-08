@@ -49,7 +49,8 @@ Here is a table showing the similarities and differences between [mogege](https:
 | PlantUML                    | Yes                                                          |         |
 | BiliBili video (shortcodes) | Yes                                                          |         |
 | Hidden text (shortcodes)    | Yes                                                          |         |
-| Social button               |                                                              | Yes     |
+| Social button               | Yes                                                          | Yes     |
+| lightGallery                |                                                              | Yes     |
 
 ## Requirements
 
@@ -185,6 +186,35 @@ You can use "hidden text" to hide spoiler content
 ```
 
 Click [here](https://mogeko.github.io/2020/080#spoiler) for examples
+
+## utteranc comment system
+
+This blog supports the 
+[utteranc](https://utteranc.es) comment system. 
+
+It is lighter and more powerful than Gitalk.
+
+To use utteranc, you need make sure the 
+[utterances app](https://github.com/apps/utterances) is 
+installed on the repo, otherwise users will not be able to post comments. 
+
+Then enable utteranc in config.toml
+
+```toml
+[params]
+    enableUtteranc = true
+```
+
+Then Configuration: (For more settings, please refer to 
+[HomePage](https://utteranc.es))
+
+```toml
+[params.utteranc] # Homepage: https://utteranc.es
+    repo = "" # The repo to store comments
+    issueTerm = "title" # the mapping between blog posts and GitHub issues. 
+    theme = "preferred-color-scheme" # Theme
+    crossorigin = "anonymous" # default: anonymous
+```
 
 ## Gitalk comment system
 

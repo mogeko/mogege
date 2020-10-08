@@ -1,0 +1,44 @@
+{{ if .Site.Params.Social }}
+<style type="text/css">
+@font-face {
+  font-family: 'iconfont';  /* project id 1910062 */
+  src: url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.eot');
+  src: url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1910062_4213q7gpkpy.svg#iconfont') format('svg');
+}
+</style>
+{{ end }}
+
+{{ with .Site.Params.Social.Github }}
+<a href="https://github.com/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-github"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.LinkedIn }}
+<a href="https://linkedin.com/in/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-linkedin"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Twitter }}
+<a href="https://twitter.com/{{.}}" target="_blank" rel="me noopener"><i class="iconfont icon-twitter"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Instagram }}
+<a href="https://www.instagram.com/{{.}}/" target="_blank" rel="me noopener"><i class="iconfont icon-instagram"></i></a> 
+{{ end }} 
+{{ with .Site.Params.Social.Email}}
+<a href="mailto:{{.}}" rel="me noopener"><i class="iconfont icon-mail01"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Facebook}}
+<a href="https://facebook.com/{{.}}" rel="me noopener"><i class="iconfont icon-facebook"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Telegram}}
+<a href="https://t.me/{{.}}" rel="me noopener"><i class="iconfont icon-telegram"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Dribbble}}
+<a href="https://dribbble.com/{{.}}" rel="me noopener"><i class="iconfont icon-dribbble"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Medium}}
+<a href="https://medium.com/{{.}}" rel="me noopener"><i class="iconfont icon-medium-circle-fill"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Wechat}}
+<a target="_blank" rel="me noopener" onclick="document.getElementById('lightbox').style.display='inline';"><i class="iconfont icon-wechat"></i></a> 
+{{end}}
